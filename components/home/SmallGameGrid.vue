@@ -3,7 +3,7 @@
     <div class="grid-title">
       <div>
         <span class="leftmost">平台推薦</span>
-        <span class="disc">精彩薈萃・激情無限</span>
+        <span class="disc">本週熱門</span>
       </div>
       <div v-if="false">
         <span class="more">更多</span>
@@ -87,14 +87,14 @@ export default {
     // border-top: 7px solid #533125
     display: flex
     justify-content: space-between
-    padding: 1.5rem .6rem 0 .6rem
-    font-size: .9em
+    padding: 1rem .5rem 0 .5rem
+    font-size: $size-65
     .leftmost,.more
-      color: #D0974A
+      color: $error-accent
       font-weight: 560
     .disc
       color: $grey
-      padding-left: 1.5rem
+      padding-left: 1rem
   .grid
     display: flex
     flex-wrap: wrap

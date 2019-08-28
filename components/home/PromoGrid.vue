@@ -1,17 +1,22 @@
 <template>
-  <div class="promogrid">
-    <div
-      v-for="(_vItem, _idx) in new Array(columns)"
-      :key="_idx"
-      class="col"
-      :class="borderCollapse ? 'collapse ' : ' ' + _idx == (columns - 1) ? 'rightmost' : ''">
+  <div
+    class="promo"
+    :class="`type${typesetting}`">
+    <div class="title">最新活動</div>
+    <div class="promogrid">
       <div
-        v-for="(item, idx) in getColumnItems(_idx)"
-        :key="idx"
-        class="promo-item"
-        :class="'size' + item.size"
-        :style="{backgroundImage: `url(${item.url})`}">
-        <span>{{ item.title }}</span>
+        v-for="(_vItem, _idx) in new Array(columns)"
+        :key="_idx"
+        class="col"
+        :class="borderCollapse ? 'collapse ' : ' ' + _idx == (columns - 1) ? 'rightmost' : ''">
+        <div
+          v-for="(item, idx) in getColumnItems(_idx)"
+          :key="idx"
+          class="promo-item"
+          :class="'size' + item.size"
+          :style="{backgroundImage: `url(${item.url})`}">
+          <span>{{ item.title }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -74,43 +79,51 @@ export default {
 };
 </script>
 <style lang="sass" scoped>
-.promogrid
-  display: flex
-  flex-direction: row
-  margin: 0 auto
-  width: 100%
-  padding: .5rem
-  .col
+.promo
+  .title
+    font-size: $size-65
+    color: $error-accent
+    font-weight: 560
+    padding: .5rem
+  .promogrid
     display: flex
-    flex-direction: column
-    flex: 1
-    margin-right: .5rem
-    &.rightmost
-      margin-right: 0
-    &.collapse
-      margin: 0
-    .promo-item
-      // width: calc(50vw - .5rem)
-      background-size: auto 100%
-      background-position: center
-      padding: .5rem
-      color: $white-bis
-      border-radius: 5px
-      +no-select
-      +normal-transition
-      &:hover
-        background-size: auto 105%
-        cursor: pointer
-      &.size1
-        height: calc(50vw - 1rem)
-        margin-bottom: .5rem
-      &.size2
-        height: calc(100vw - 1.5rem)
-        margin-bottom: .5rem
-      &.size3
-        height: calc(150vw - 2rem)
-        margin-bottom: .5rem
-        
+    flex-direction: row
+    margin: 0 auto
+    width: 100%
+    padding: .5rem
+    .col
+      display: flex
+      flex-direction: column
+      flex: 1
+      margin-right: .5rem
+      &.rightmost
+        margin-right: 0
+      &.collapse
+        margin: 0
+      .promo-item
+        // width: calc(50vw - .5rem)
+        background-size: auto 100%
+        background-position: center
+        padding: .5rem
+        color: $white-bis
+        border-radius: 5px
+        +no-select
+        +normal-transition
+        span
+          text-shadow: 0 0 3px grey
+        &:hover
+          background-size: auto 105%
+          cursor: pointer
+        &.size1
+          height: calc(50vw - 1rem)
+          margin-bottom: .5rem
+        &.size2
+          height: calc(100vw - 1.5rem)
+          margin-bottom: .5rem
+        &.size3
+          height: calc(150vw - 2rem)
+          margin-bottom: .5rem
+          
 
 
 
