@@ -1,5 +1,7 @@
 <template>
-  <div class="smallgamegrid">
+  <div
+    class="smallgamegrid"
+    :class="`type${typesetting}`">
     <div class="grid-title">
       <div>
         <span class="leftmost">平台推薦</span>
@@ -83,6 +85,20 @@ export default {
 </script>
 <style lang="sass" scoped>
 .smallgamegrid
+  &.type0
+    .grid
+      .item
+        .icon
+          img
+            box-shadow: 0 0 10px $grey-lighter
+            border-radius: 100%
+        .title
+          font-size: $size-65
+  &.type1
+    .grid
+      .item
+        .title
+          background: $warning-accent
   .grid-title
     // border-top: 7px solid #533125
     display: flex
