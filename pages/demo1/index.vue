@@ -37,6 +37,11 @@
         v-if="component.type === 'GameMenu'"
         />
 
+      <div v-if="component.type === 'TabBar'">
+        <br/>
+        <br/>
+        <br/>
+      </div>
       <TabBar
         v-if="component.type === 'TabBar'"
         />
