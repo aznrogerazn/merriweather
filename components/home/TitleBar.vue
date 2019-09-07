@@ -12,6 +12,10 @@
         v-if="el === 'B'">
         {{ brandname }}
       </div>
+      <img
+        class="image"
+        v-if="el === 'I'"
+        src="/logo/rect.png"/>
       <div
         v-if="el === 'M'">
         =
@@ -48,7 +52,8 @@ export default {
       /**
        * Elements explained:
        * N: Nothing
-       * B: Branding Image
+       * B: Branding Text
+       * I: Branding Image
        * M: Menu (to replace TabBar)
        * C: Customer service link
        */
@@ -94,6 +99,14 @@ export default {
     &.B
     &.M
     &.C
+    &.I
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 100%
+      img
+        max-height: 32px
+        margin: 2px 0
 
 @media screen and (max-width: $mobile-width)
   .title-bar

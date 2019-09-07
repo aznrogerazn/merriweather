@@ -94,6 +94,7 @@ export default {
             border-radius: 100%
         .title
           font-size: $size-65
+          
   &.type1
     .grid
       .item

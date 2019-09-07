@@ -52,7 +52,7 @@ export default {
     },
     items: {
       type: Array,
-      default: [
+      default: () => [
         { url: '/img/l_58f8957c3286fe19a80a5e8d.png', title: '彩票', size: 1, col: 0 },
         { url: '/img/23379ae2c5ed4e0b0ed2efe0e78a4e15032b9e53ff06c-wGAUUh_fw658.jpg', title: '彩票', size: 2, col: 1 },        
         { url: '/img/15378652377735685.jpg', title: '彩票', size: 3, col: 0 },
@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     getColumnItems(idx) {
-      console.log(idx);
+      // console.log(idx);
       const { items } = this;
       const _col = [];
       items.map((item, _idx) => {
@@ -72,7 +72,7 @@ export default {
           _col.push(item);
         }
       });
-      console.log(_col);
+      // console.log(_col);
       return _col;
     },
   },

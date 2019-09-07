@@ -8,6 +8,7 @@
         v-if="component.type === 'TitleBar'"
         :fixed="component.fixed"
         :typesetting="component.typesetting"
+        :arrangement="component.arrangement"
         />
       <TitleBarPad
         v-if="component.type === 'TitleBar' && component.fixed === true"
@@ -35,6 +36,10 @@
       <GameMenu
         v-if="component.type === 'GameMenu'"
         />
+
+      <TabBar
+        v-if="component.type === 'TabBar'"
+        />
       
       
     </div>
@@ -43,6 +48,7 @@
 
 <script>
 import TitleBar from '@/components/home/TitleBar';
+import TabBar from '@/components/home/TabBar';
 import TitleBarPad from '@/components/home/TitleBarPad';
 import Carousel from '@/components/home/Carousel';
 import Announcements from '@/components/home/Announcements';
@@ -57,6 +63,7 @@ export default {
   name: 'HomePage',
   components: {
     TitleBar,
+    TabBar,
     TitleBarPad,
     Carousel,
     Announcements,
@@ -69,7 +76,7 @@ export default {
   data() {
     return {
       DEMO1_LAYOUT: [
-        { type: 'TitleBar', fixed: true, typesetting: 0 },
+        { type: 'TitleBar', fixed: true, typesetting: 0, arrangement: 'NIN' },
         { type: 'Carousel', carousel: [
           { url: '/img/2017-11-09-23.19.20.png' },
           { url: '/img/C-MDJXfUAAAE_59.jpg' },
@@ -87,6 +94,7 @@ export default {
         ], },
         { type: 'PromoGrid', },
         { type: 'GameMenu', },
+        { type: 'TabBar', },
       ],
     };
   },

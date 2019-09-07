@@ -1,36 +1,8 @@
 <template>
   <div
     ref="pageContainer">
-    <div
-      v-for="(component, idx) in INDEX_LAYOUT"
-      :key="idx">
-      <TitleBar
-        v-if="component.type === 'TitleBar'"
-        />
-      <Carousel
-        v-if="component.type === 'Carousel'"
-        />
-      <Announcements
-        v-if="component.type === 'Announcements'"
-        />
-      <CustomerService
-        v-if="component.type === 'CustomerService'"
-        />
-      <GameGrid
-        v-if="component.type === 'GameGrid'"
-        />
-      <PromoGrid
-        v-if="component.type === 'PromoGrid'"
-        />
-      <SmallGameGrid
-        v-if="component.type === 'SmallGameGrid'"
-        />
-      <GameMenu
-        v-if="component.type === 'GameMenu'"
-        />
-      
-      
-    </div>
+    <TitleBar arrangement="NIN"/>
+    <DemoGrid />
   </div>
 </template>
 
@@ -43,7 +15,7 @@ import GameGrid from '@/components/home/GameGrid';
 import PromoGrid from '@/components/home/PromoGrid';
 import SmallGameGrid from '@/components/home/SmallGameGrid';
 import GameMenu from '@/components/home/GameMenu';
-
+import DemoGrid from '@/components/DemoGrid';
 
 export default {
   name: 'HomePage',
@@ -56,6 +28,7 @@ export default {
     PromoGrid,
     SmallGameGrid,
     GameMenu,
+    DemoGrid,
   },
   data() {
     return {};
