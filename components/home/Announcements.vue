@@ -3,7 +3,7 @@
     class="announcements"
     :class="`type${typesetting}`">
     <div class="news-tag">
-      <span><i class="fas fa-bullhorn"/></span>
+      <span><i class="fas fa-volume-up"/></span>
     </div>
     <div class="marquee">
       <span
@@ -110,9 +110,12 @@ export default {
       color: $white-bis
       font-size: $size-65
   &.type2
-    background: $grey-lighter
+    border-top: 3px solid $complimentary-accent-3
+    border-bottom: 3px solid $complimentary-accent-3
     .news-tag
-      background: grey
+      background: $grey-light
+      i
+        color: $complimentary-accent-3
   &.type3
     background: $grey-lighter
     .news-tag

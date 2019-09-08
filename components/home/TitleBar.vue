@@ -1,7 +1,7 @@
 <template>
   <div
     class="title-bar"
-    :class="fixed ? 'fixed' : '' "
+    :class="(fixed ? 'fixed ' : '' )+ `style${typesetting}`"
     :style="{ background: bgColour }">
     <div
       class="item"
@@ -41,6 +41,11 @@ export default {
     ])
   },
   props: {
+    typesetting: {
+      type: Number,
+      required: false,
+      default: 0,
+    },
     fixed: {
       type: Boolean,
       default: true,
@@ -107,6 +112,14 @@ export default {
       img
         max-height: 32px
         margin: 2px 0
+  &.style0
+  &.style1
+  &.style2
+    box-shadow: 0 0 1rem $grey
+  &.style3
+  &.style4
+  &.style5
+  
 
 @media screen and (max-width: $mobile-width)
   .title-bar

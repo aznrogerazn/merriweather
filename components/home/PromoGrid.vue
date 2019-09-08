@@ -2,7 +2,11 @@
   <div
     class="promo"
     :class="`style${typesetting}`">
-    <div class="title">最新活動</div>
+    <div class="title">
+      <span>
+        最新活動
+      </span>
+    </div>
     <div class="promogrid">
       <div
         v-for="(_vItem, _idx) in new Array(columns)"
@@ -130,6 +134,10 @@ export default {
       color: $primary-accent-2
       font-weight: 800
   &.style2
+    .title
+      span
+        border-left: 5px solid $primary-accent-3
+        padding-left: .5rem
   &.style3
   &.style4
   &.style5

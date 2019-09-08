@@ -10,6 +10,7 @@
         :fixed="component.fixed"
         :typesetting="component.typesetting"
         :arrangement="component.arrangement"
+        :bgColour="component.bgColour"
         />
       <TitleBarPad
         v-if="component.type === 'TitleBar' && component.fixed === true"
@@ -50,6 +51,7 @@
       <TabBar
         v-if="component.type === 'TabBar'"
         :typesetting="component.typesetting"
+        :bgColour="component.bgColour"
         />
       
       
@@ -85,16 +87,17 @@ export default {
     GameMenu,
   },
   data() {
-    const DEMO_IDX = 1;
+    const DEMO_IDX = 2;
     return {
       DEMO1_LAYOUT: [
         { type: 'TitleBar', fixed: true,
-          typesetting: DEMO_IDX, arrangement: 'NIN' },
+          typesetting: DEMO_IDX, arrangement: 'NIN',
+          bgColour: 'white', },
         { type: 'Carousel',
           typesetting: DEMO_IDX,
           carousel: [
-          { url: '/img/banner11.jpg' },
-          { url: '/img/banner-0519.jpg' },
+          { url: '/img/137-636703421531313789_1_orig.jpg' },
+          { url: '/img/3477569.jpg' },
         ], },
         { type: 'Announcements', 
           typesetting: DEMO_IDX, },
@@ -111,12 +114,12 @@ export default {
         ], },
         { type: 'PromoGrid', typesetting: DEMO_IDX,
           items: [
-          { url: '/img/l_58f8957c3286fe19a80a5e8d.png', title: '', size: 1, col: 0 },
-          { url: '/img/sport_banner_sc.jpg', title: '', size: 1, col: 1 },        
-          { url: '/img/1-140603230Z223.jpg', title: '', size: 1, col: 0 },
+          { url: '/img/b221ZC261-0.jpg', title: '', size: 1, col: 0 },
+          { url: '/img/sport_banner_sc.jpg', title: '', size: 2, col: 1 },        
+          { url: '/img/1-140603230Z223.jpg', title: '', size: 2, col: 0 },
           { url: '/img/bimages55.jpg', title: '', size: 1, col: 1 },
         ],},
-        { type: 'TabBar', typesetting: DEMO_IDX, },
+        { type: 'TabBar', typesetting: DEMO_IDX, bgColour: 'white' },
       ],
     };
   },
@@ -132,5 +135,5 @@ export default {
 
 <style lang="sass">
 .page
-  background: $black-ter
+  background: $white-ter
 </style>

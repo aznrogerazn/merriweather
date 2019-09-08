@@ -139,6 +139,7 @@ export default {
   &.style1
     height: 28vw
   &.style2
+    height: 34vw
   &.style3
   &.style4
   &.style5

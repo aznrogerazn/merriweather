@@ -78,9 +78,12 @@ export default {
       .caption
         color: $grey-lighter
   &.style2
+    background: white
+    box-shadow: 0 0 1rem $grey-dark
     .icon
       .caption
-        color: $grey-lighter
+        color: $primary-accent-3
+        font-weight: 780
   &.style3
     .icon
       .caption

@@ -109,10 +109,22 @@ export default {
           img
             border-radius: 100px
   &.type2
+    .grid-title
+      .leftmost,.more
+        color: $primary-accent-3
+        font-weight: 780
+        border-left: 5px solid $primary-accent-3
+        padding-left: .5rem
     .grid
       .item
         .title
-          background: $warning-accent
+          font-size: $size-7
+
+        .icon
+          padding: 1rem 1rem .5rem 1rem
+          img
+            border-radius: 100px
+            box-shadow: 0 0 1rem 0 $grey-light
   &.type3
     .grid
       .item
