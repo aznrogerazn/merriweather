@@ -92,13 +92,12 @@ export default {
     return {
       DEMO1_LAYOUT: [
         { type: 'TitleBar', fixed: true,
-          typesetting: DEMO_IDX, arrangement: 'NIN',
-          bgColour: 'white', },
+          typesetting: DEMO_IDX, arrangement: 'NIN',},
         { type: 'Carousel',
           typesetting: DEMO_IDX,
           carousel: [
-          { url: '/img/3477569.jpg' },
-          { url: '/img/962X362_hoya_banner_5.jpg' },
+          { url: '/img/01194846445.jpg' },
+          { url: '/img/5660fcb909a1a.jpg' },
         ], },
         { type: 'Announcements', 
           typesetting: DEMO_IDX, },
@@ -114,11 +113,13 @@ export default {
           { name: 'AG電子', src: '/icons/games/4.jpg', destination: '' },
         ], },
         { type: 'PromoGrid', typesetting: DEMO_IDX,
-          columns: 1,
+          columns: 3,
           items: [
-          { url: '/icons/banner/banner2.jpg', title: '', size: 1, col: 0 },
-          { url: '/img/2017-11-09-23.19.20.png', title: '', size: 1, col: 0 },        
-          { url: '/img/C-MDJXfUAAAE_59.jpg', title: '', size: 2, col: 0 },
+          { url: '/img/131690609314826110.jpg', title: '', size: 2, col: 0 },
+          { url: '/img/bimages55.jpg', title: '', size: 1, col: 1 },
+          { url: '/img/true.jpg', title: '', size: 1, col: 1 },
+          
+          { url: '/img/258069-15120111593481.jpg', title: '', size: 2, col: 2 },
         ],},
         { type: 'TabBar', typesetting: DEMO_IDX, bgColour: '#323232' },
       ],

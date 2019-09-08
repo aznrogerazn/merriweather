@@ -106,9 +106,11 @@ export default {
         color: $white-bis
         font-size: $size-7
   &.style5
+    padding: 2px 0
+    box-shadow: 0 0 .5rem $grey-dark
     .icon
       .caption
-        color: $primary-accent-6
+        color: $complimentary-accent-6
   
 
 @media screen and (max-width: $mobile-width)

@@ -164,12 +164,18 @@ export default {
   &.type5
     .grid-title
       .leftmost,.more
-        color: $primary-accent-6
+        color: $complimentary-accent-6
         font-weight: 780
+        &:before
+          content: '>'
+          padding-right: .25rem
     .grid
       .item
         .title
-          color: $primary-accent-6
+          font-size: $size-7
+          font-weight: 780
+          padding-bottom: 1rem
+          color: $complimentary-accent-6
         .icon
           img
             border-radius: 100px

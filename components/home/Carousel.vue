@@ -144,6 +144,7 @@ export default {
   &.style4
     height: 35vw
   &.style5
+    height: 45vw
   
 @media screen and (max-width: $mobile-width)
   .carousel-wrapper

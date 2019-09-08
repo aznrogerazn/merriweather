@@ -160,7 +160,10 @@ export default {
   &.style5
     .title
       span
-        color: $primary-accent-6
+        color: $complimentary-accent-6
+        font-weight: 780
+        &:before
+          content: '>'
 
 @media screen and (max-width: $mobile-width)
   .promogrid

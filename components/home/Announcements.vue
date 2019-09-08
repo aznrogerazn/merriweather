@@ -129,11 +129,13 @@ export default {
   &.type5
     background: $grey-lighter
     .news-tag
-      background: grey
-  &.type6
-    background: $grey-lighter
-    .news-tag
-      background: grey
+      background: $secondary-accent-6
+      padding: .5rem
+      i
+        color: $white-bis
+    .marquee
+      font-size: $size-65
+  
   &.type9
     background: linear-gradient(to right, #AE8D2C 0%, #E6DB47 40%, #E6DB47 80%, #AE8D2C 100%)
   .news-tag
