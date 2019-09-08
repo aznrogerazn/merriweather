@@ -148,15 +148,31 @@ export default {
             border-radius: 100px
             border: 2px solid $complimentary-accent-4
   &.type4
+    .grid-title
+      .leftmost,.more
+        background: $primary-accent-5
+        color: $white-bis
+        padding: 3px 5px
+        font-weight: 780
     .grid
       .item
         .title
-          background: $warning-accent
+          color: $primary-accent-5
+        .icon
+          img
+            border-radius: 100px
   &.type5
+    .grid-title
+      .leftmost,.more
+        color: $primary-accent-6
+        font-weight: 780
     .grid
       .item
         .title
-          background: $warning-accent
+          color: $primary-accent-6
+        .icon
+          img
+            border-radius: 100px
           
   .grid-title
     // border-top: 7px solid #533125

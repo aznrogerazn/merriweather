@@ -99,13 +99,16 @@ export default {
         border-radius: 100px
         max-height: 26px
   &.style4
+    background: $primary-accent-5 !important
+    box-shadow: 0 0 .5rem $grey
     .icon
       .caption
-        color: $grey-lighter
+        color: $white-bis
+        font-size: $size-7
   &.style5
     .icon
       .caption
-        color: $grey-lighter
+        color: $primary-accent-6
   
 
 @media screen and (max-width: $mobile-width)

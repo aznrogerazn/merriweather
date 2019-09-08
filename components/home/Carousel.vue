@@ -142,6 +142,7 @@ export default {
     height: 34vw
   &.style3
   &.style4
+    height: 35vw
   &.style5
   
 @media screen and (max-width: $mobile-width)

@@ -150,7 +150,17 @@ export default {
         .promo-item
           border-radius: 1px
   &.style4
+    margin-top: 1rem
+    .title
+      span
+        background: $primary-accent-5
+        color: $white-bis
+        padding: 3px 5px
+        font-weight: 780
   &.style5
+    .title
+      span
+        color: $primary-accent-6
 
 @media screen and (max-width: $mobile-width)
   .promogrid

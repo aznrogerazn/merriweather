@@ -21,8 +21,8 @@ export default {
         { path: '/demo1/', imgUrl: '/preview1.png', isWIP: false, },
         { path: '/demo2/', imgUrl: '/preview2.png', isWIP: false, },
         { path: '/demo3/', imgUrl: '/preview3.png', isWIP: false, },
-        { path: '/demo4/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png', isWIP: true, },
-        { path: '/demo5/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png', isWIP: true, },
+        { path: '/demo4/', imgUrl: '/preview4.png', isWIP: false, },
+        { path: '/demo5/', imgUrl: '/preview5.png', isWIP: false, },
         { path: '/demo6/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png', isWIP: true, },
       ]
     }

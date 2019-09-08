@@ -119,6 +119,8 @@ export default {
   &.style3
     border-bottom: 4px solid $complimentary-accent-4
   &.style4
+    background: $white-bis !important
+    border-bottom: 2px solid $complimentary-accent-5
   &.style5
   
 
