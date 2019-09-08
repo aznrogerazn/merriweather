@@ -139,6 +139,16 @@ export default {
         border-left: 5px solid $primary-accent-3
         padding-left: .5rem
   &.style3
+    .title
+      span
+        color: $primary-accent-4
+        border-bottom: 3px solid $primary-accent-4
+        padding-bottom: 3px
+        padding-right: 1rem
+    .promogrid
+      .col
+        .promo-item
+          border-radius: 1px
   &.style4
   &.style5
 

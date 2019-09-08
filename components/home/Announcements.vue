@@ -91,7 +91,7 @@ export default {
 .announcements
   display: flex
   width: 100%
-  z-index: 100
+  z-index: 10
   overflow: hidden
   color: $grey-darker
   align-items: center
@@ -119,7 +119,9 @@ export default {
   &.type3
     background: $grey-lighter
     .news-tag
-      background: grey
+      background: $grey-light
+      i
+        color: $complimentary-accent-4
   &.type4
     background: $grey-lighter
     .news-tag
@@ -140,7 +142,7 @@ export default {
     background: linear-gradient(to right, #AE8D2C 0%, #AE8D2C 80%, transparent 100%)
     // background: $theme-accent
     padding: .2rem .5rem
-    z-index: 110
+    z-index: 11
     i
       padding-right: .5em
       color: $white-bis

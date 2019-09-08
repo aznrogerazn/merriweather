@@ -117,6 +117,7 @@ export default {
   &.style2
     box-shadow: 0 0 1rem $grey
   &.style3
+    border-bottom: 4px solid $complimentary-accent-4
   &.style4
   &.style5
   

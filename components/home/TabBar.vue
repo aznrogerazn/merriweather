@@ -85,9 +85,17 @@ export default {
         color: $primary-accent-3
         font-weight: 780
   &.style3
+    padding: 5px 0 1px 0
+    border-top: 3px solid $complimentary-accent-4
     .icon
       .caption
-        color: $grey-lighter
+        font-size: $size-7
+        color: $primary-accent-4
+        font-weight: normal
+      img
+        box-shadow: 0 0 3px 1px $primary-accent-4
+        border-radius: 100px
+        max-height: 26px
   &.style4
     .icon
       .caption

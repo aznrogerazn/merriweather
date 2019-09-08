@@ -1,6 +1,6 @@
 <template>
   <div
-    class="page3"
+    class="page"
     ref="pageContainer">
     <div
       v-for="(component, idx) in DEMO1_LAYOUT"
@@ -87,7 +87,7 @@ export default {
     GameMenu,
   },
   data() {
-    const DEMO_IDX = 2;
+    const DEMO_IDX = 3;
     return {
       DEMO1_LAYOUT: [
         { type: 'TitleBar', fixed: true,
@@ -96,8 +96,8 @@ export default {
         { type: 'Carousel',
           typesetting: DEMO_IDX,
           carousel: [
-          { url: '/img/137-636703421531313789_1_orig.jpg' },
-          { url: '/img/3477569.jpg' },
+          { url: '/img/i88-500-134_1.jpg' },
+          { url: '/img/1df4eff4331b7fb7e8525023afde12ea667c655f6b79d-jQPNLf_fw658.png' },
         ], },
         { type: 'Announcements', 
           typesetting: DEMO_IDX, },
@@ -115,8 +115,8 @@ export default {
         { type: 'PromoGrid', typesetting: DEMO_IDX,
           items: [
           { url: '/img/b221ZC261-0.jpg', title: '', size: 1, col: 0 },
-          { url: '/img/true.jpg', title: '', size: 2, col: 1 },        
-          { url: '/img/330198-160ZF9402162.jpg', title: '', size: 2, col: 0 },
+          { url: '/img/sport_banner_sc.jpg', title: '', size: 2, col: 1 },        
+          { url: '/img/1-140603230Z223.jpg', title: '', size: 2, col: 0 },
           { url: '/img/bimages55.jpg', title: '', size: 1, col: 1 },
         ],},
         { type: 'TabBar', typesetting: DEMO_IDX, bgColour: 'white' },
@@ -134,6 +134,6 @@ export default {
 </script>
 
 <style lang="sass">
-.page3
+.page
   background: $white-ter
 </style>

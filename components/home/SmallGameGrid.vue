@@ -22,7 +22,7 @@
           <img :src="item.src"/>
         </div>
         <div class="title">
-          {{ item.name }}
+          <span>{{ item.name }}</span>
         </div>
       </div>
     </div>
@@ -126,10 +126,28 @@ export default {
             border-radius: 100px
             box-shadow: 0 0 1rem 0 $grey-light
   &.type3
+    .grid-title
+      .leftmost,.more
+        color: $primary-accent-4
+        border-bottom: 3px solid $primary-accent-4
+        padding-bottom: 3px
+        padding-right: 1rem
     .grid
       .item
         .title
-          background: $warning-accent
+          font-size: $size-65
+          background: $complimentary-accent-4
+          color: $white-bis
+          min-height: 1.25rem
+          span
+            vertical-align: middle
+        .icon
+          padding: 1rem 1rem .5rem 1rem
+          text-align: center
+          img
+            width: calc(22vw - 2rem)
+            border-radius: 100px
+            border: 2px solid $complimentary-accent-4
   &.type4
     .grid
       .item
