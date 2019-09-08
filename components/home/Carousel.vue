@@ -1,7 +1,8 @@
 <template>
   <div
     ref="carouselWrapper"
-    class="carousel-wrapper">
+    class="carousel-wrapper"
+    :class="`style${typesetting}`">
     <div
       v-for="(image, idx) in carousel"
       :key="idx"
@@ -29,6 +30,11 @@ export default {
       type: Array,
       required: false,
       default: [],
+    },
+    typesetting: {
+      type: Number,
+      default: 0,
+      required: false,
     },
   },
   data() {
@@ -129,6 +135,13 @@ export default {
       .subtitle
         font-size: 1.05rem
         font-style: italic
+  &.style0
+  &.style1
+    height: 28vw
+  &.style2
+  &.style3
+  &.style4
+  &.style5
   
 @media screen and (max-width: $mobile-width)
   .carousel-wrapper

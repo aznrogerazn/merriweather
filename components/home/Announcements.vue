@@ -100,6 +100,32 @@ export default {
     .news-tag
       background: grey
   &.type1
+    background: $secondary-accent-2
+    .news-tag
+      background: $grey-dark
+      padding: .5rem .5rem
+      i
+        color: $complimentary-accent-2
+    .marquee
+      color: $white-bis
+      font-size: $size-65
+  &.type2
+    background: $grey-lighter
+    .news-tag
+      background: grey
+  &.type3
+    background: $grey-lighter
+    .news-tag
+      background: grey
+  &.type4
+    background: $grey-lighter
+    .news-tag
+      background: grey
+  &.type5
+    background: $grey-lighter
+    .news-tag
+      background: grey
+  &.type6
     background: $grey-lighter
     .news-tag
       background: grey
@@ -112,7 +138,7 @@ export default {
     // background: $theme-accent
     padding: .2rem .5rem
     z-index: 110
-    i.fas
+    i
       padding-right: .5em
       color: $white-bis
       font-size: $size-65

@@ -15,31 +15,28 @@
         />
       <Carousel
         v-if="component.type === 'Carousel'"
-        :typesetting="component.typesetting"
         :carousel="component.carousel"
         />
       <Announcements
         v-if="component.type === 'Announcements'"
-        :typesetting="component.typesetting"
         />
       <CustomerService
         v-if="component.type === 'CustomerService'"
-        :typesetting="component.typesetting"
         />
       <GameGrid
         v-if="component.type === 'GameGrid'"
-        :typesetting="component.typesetting"
         />
       <PromoGrid
         v-if="component.type === 'PromoGrid'"
-        :typesetting="component.typesetting"
         />
       <SmallGameGrid
         v-if="component.type === 'SmallGameGrid'"
-        :typesetting="component.typesetting"
         :items="component.items"
         />
-      
+      <GameMenu
+        v-if="component.type === 'GameMenu'"
+        />
+
       <div v-if="component.type === 'TabBar'">
         <br/>
         <br/>
@@ -47,7 +44,6 @@
       </div>
       <TabBar
         v-if="component.type === 'TabBar'"
-        :typesetting="component.typesetting"
         />
       
       
@@ -85,29 +81,9 @@ export default {
   data() {
     return {
       DEMO1_LAYOUT: [
-        { type: 'TitleBar', fixed: true,
-          typesetting: 0, arrangement: 'NIN' },
-        { type: 'Carousel',
-          typesetting: 0,
-          carousel: [
-          { url: '/img/2017-11-09-23.19.20.png' },
-          { url: '/img/C-MDJXfUAAAE_59.jpg' },
-        ], },
-        { type: 'Announcements', 
-          typesetting: 0, },
-        { type: 'SmallGameGrid',
-          typesetting: 0, items: [
-          { name: 'BINGO STAR', src: '/icons/games2/01.png', destination: '3' },
-          { name: '極速北京PK10', src: '/icons/pk10-2.png', destination: '2', assign: '1' },
-          { name: '極速飛艇', src: '/icons/speedboat.png', destination: '2', assign: '2' },
-          { name: '奔騰賽馬', src: '/icons/horseracing.png', destination: '2', assign: '3' },
-          { name: 'SUPER體育', src: '/icons/games/7.jpg', destination: '1' },
-          { name: 'Forever8', src: '/icons/games2/forever8-round.png', destination: '/games?tab=5' },
-          { name: 'SA真人', src: '/icons/games2/05.png', destination: '5' },
-          { name: '瑪雅真人', src: '/icons/games2/06.png', destination: '' },
-        ], },
-        { type: 'PromoGrid', typesetting: 0, },
-        { type: 'TabBar', typesetting: 0, },
+        { type: 'TitleBar', fixed: true, typesetting: 0, arrangement: 'NIN' },
+        { type: 'GameMenu', },
+        { type: 'TabBar', },
       ],
     };
   },
@@ -118,10 +94,5 @@ export default {
     // console.log(this.APP_LAYOUT.fontStack);
     const { pageContainer } = this.$refs;
   },
-}
+};
 </script>
-
-<style lang="sass">
-.container
-  margin: 0 auto
-</style>

@@ -38,7 +38,7 @@ export default {
     INDEX_LAYOUT() { return process.env.INDEX_LAYOUT },
   },
   mounted() {
-    console.log(this.APP_LAYOUT.fontStack);
+    // console.log(this.APP_LAYOUT.fontStack);
     const { pageContainer } = this.$refs;
   },
 }

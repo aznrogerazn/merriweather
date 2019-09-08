@@ -1,7 +1,7 @@
 <template>
   <div
     class="promo"
-    :class="`type${typesetting}`">
+    :class="`style${typesetting}`">
     <div class="title">最新活動</div>
     <div class="promogrid">
       <div
@@ -123,9 +123,16 @@ export default {
         &.size3
           height: calc(150vw - 2rem)
           margin-bottom: .5rem
-          
-
-
+  &.style0
+  &.style1
+    background: $black-ter
+    .title
+      color: $primary-accent-2
+      font-weight: 800
+  &.style2
+  &.style3
+  &.style4
+  &.style5
 
 @media screen and (max-width: $mobile-width)
   .promogrid

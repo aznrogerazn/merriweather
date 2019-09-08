@@ -19,10 +19,16 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=auto' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { property: 'og:image', content: (() => {
+        return '/logo/rect.jpg';
+      })() }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', sizes: '128x128', href: (() => {
+        return '/icon2.png';
+      })() },
       // Google Fonts by LAYOUT config
       { rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?display=swap&family=' + LAYOUT.googleFontsToLoad.map(fnt => fnt.replace(/ /g, '+')).join('|')

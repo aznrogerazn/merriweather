@@ -1,5 +1,6 @@
 <template>
   <div
+    class="page"
     ref="pageContainer">
     <div
       v-for="(component, idx) in DEMO1_LAYOUT"
@@ -8,32 +9,47 @@
         v-if="component.type === 'TitleBar'"
         :fixed="component.fixed"
         :typesetting="component.typesetting"
+        :arrangement="component.arrangement"
         />
       <TitleBarPad
         v-if="component.type === 'TitleBar' && component.fixed === true"
         />
       <Carousel
         v-if="component.type === 'Carousel'"
+        :typesetting="component.typesetting"
         :carousel="component.carousel"
         />
       <Announcements
         v-if="component.type === 'Announcements'"
+        :typesetting="component.typesetting"
         />
       <CustomerService
         v-if="component.type === 'CustomerService'"
+        :typesetting="component.typesetting"
         />
       <GameGrid
         v-if="component.type === 'GameGrid'"
+        :typesetting="component.typesetting"
         />
       <PromoGrid
         v-if="component.type === 'PromoGrid'"
+        :typesetting="component.typesetting"
+        :items="component.items"
         />
       <SmallGameGrid
         v-if="component.type === 'SmallGameGrid'"
+        :typesetting="component.typesetting"
         :items="component.items"
         />
-      <GameMenu
-        v-if="component.type === 'GameMenu'"
+      
+      <div v-if="component.type === 'TabBar'">
+        <br/>
+        <br/>
+        <br/>
+      </div>
+      <TabBar
+        v-if="component.type === 'TabBar'"
+        :typesetting="component.typesetting"
         />
       
       
@@ -43,6 +59,7 @@
 
 <script>
 import TitleBar from '@/components/home/TitleBar';
+import TabBar from '@/components/home/TabBar';
 import TitleBarPad from '@/components/home/TitleBarPad';
 import Carousel from '@/components/home/Carousel';
 import Announcements from '@/components/home/Announcements';
@@ -57,6 +74,7 @@ export default {
   name: 'HomePage',
   components: {
     TitleBar,
+    TabBar,
     TitleBarPad,
     Carousel,
     Announcements,
@@ -67,15 +85,21 @@ export default {
     GameMenu,
   },
   data() {
+    const DEMO_IDX = 1;
     return {
       DEMO1_LAYOUT: [
-        { type: 'TitleBar', fixed: true, typesetting: 0 },
-        { type: 'Carousel', carousel: [
-          { url: '/img/2017-11-09-23.19.20.png' },
-          { url: '/img/C-MDJXfUAAAE_59.jpg' },
+        { type: 'TitleBar', fixed: true,
+          typesetting: DEMO_IDX, arrangement: 'NIN' },
+        { type: 'Carousel',
+          typesetting: DEMO_IDX,
+          carousel: [
+          { url: '/img/banner11.jpg' },
+          { url: '/img/962X362_hoya_banner_3.jpg' },
         ], },
-        { type: 'Announcements', },
-        { type: 'SmallGameGrid', items: [
+        { type: 'Announcements', 
+          typesetting: DEMO_IDX, },
+        { type: 'SmallGameGrid',
+          typesetting: DEMO_IDX, items: [
           { name: 'BINGO STAR', src: '/icons/games2/01.png', destination: '3' },
           { name: '極速北京PK10', src: '/icons/pk10-2.png', destination: '2', assign: '1' },
           { name: '極速飛艇', src: '/icons/speedboat.png', destination: '2', assign: '2' },
@@ -85,8 +109,14 @@ export default {
           { name: 'SA真人', src: '/icons/games2/05.png', destination: '5' },
           { name: '瑪雅真人', src: '/icons/games2/06.png', destination: '' },
         ], },
-        { type: 'PromoGrid', },
-        { type: 'GameMenu', },
+        { type: 'PromoGrid', typesetting: DEMO_IDX,
+          items: [
+          { url: '/img/l_58f8957c3286fe19a80a5e8d.png', title: '', size: 1, col: 0 },
+          { url: '/img/sport_banner_sc.jpg', title: '', size: 1, col: 1 },        
+          { url: '/img/1-140603230Z223.jpg', title: '', size: 1, col: 0 },
+          { url: '/img/bimages55.jpg', title: '', size: 1, col: 1 },
+        ],},
+        { type: 'TabBar', typesetting: DEMO_IDX, },
       ],
     };
   },
@@ -94,13 +124,13 @@ export default {
     APP_LAYOUT() { return process.env.APP_LAYOUT },
   },
   mounted() {
-    console.log(this.APP_LAYOUT.fontStack);
+    // console.log(this.APP_LAYOUT.fontStack);
     const { pageContainer } = this.$refs;
   },
 }
 </script>
 
 <style lang="sass">
-.container
-  margin: 0 auto
+.page
+  background: $black-ter
 </style>

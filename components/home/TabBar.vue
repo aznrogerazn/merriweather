@@ -7,7 +7,7 @@
       v-for="(item, idx) in arrangement"
       :key="idx"
       class="icon"
-      :to="item.link">
+      :to="`./`">
       <img :src="`/tabbar/colour${typesetting}/${item.type}.png`"/>
       <div
         v-if="item.caption"
@@ -29,7 +29,7 @@ export default {
       required: false,
       default() {
         return [
-          { type: 'home', caption: '首頁', link: 'home', },
+          { type: 'home', caption: '首頁', link: '', },
           { type: 'lobby', caption: '遊戲大廳', link: 'lobby', },
           { type: 'deposit', caption: '存款', link: 'deposit', emphasis: true },
           { type: 'cs', caption: '客服', link: 'cs', },
@@ -73,6 +73,27 @@ export default {
     .icon
       .caption
         color: $grey-lighter
+  &.style1
+    .icon
+      .caption
+        color: $grey-lighter
+  &.style2
+    .icon
+      .caption
+        color: $grey-lighter
+  &.style3
+    .icon
+      .caption
+        color: $grey-lighter
+  &.style4
+    .icon
+      .caption
+        color: $grey-lighter
+  &.style5
+    .icon
+      .caption
+        color: $grey-lighter
+  
 
 @media screen and (max-width: $mobile-width)
   .tabbar

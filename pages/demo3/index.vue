@@ -1,5 +1,6 @@
 <template>
   <div
+    class="page"
     ref="pageContainer">
     <div
       v-for="(component, idx) in DEMO1_LAYOUT"
@@ -33,6 +34,7 @@
       <PromoGrid
         v-if="component.type === 'PromoGrid'"
         :typesetting="component.typesetting"
+        :items="component.items"
         />
       <SmallGameGrid
         v-if="component.type === 'SmallGameGrid'"
@@ -83,20 +85,21 @@ export default {
     GameMenu,
   },
   data() {
+    const DEMO_IDX = 1;
     return {
       DEMO1_LAYOUT: [
         { type: 'TitleBar', fixed: true,
-          typesetting: 0, arrangement: 'NIN' },
+          typesetting: DEMO_IDX, arrangement: 'NIN' },
         { type: 'Carousel',
-          typesetting: 0,
+          typesetting: DEMO_IDX,
           carousel: [
-          { url: '/img/2017-11-09-23.19.20.png' },
-          { url: '/img/C-MDJXfUAAAE_59.jpg' },
+          { url: '/img/banner11.jpg' },
+          { url: '/img/banner-0519.jpg' },
         ], },
         { type: 'Announcements', 
-          typesetting: 0, },
+          typesetting: DEMO_IDX, },
         { type: 'SmallGameGrid',
-          typesetting: 0, items: [
+          typesetting: DEMO_IDX, items: [
           { name: 'BINGO STAR', src: '/icons/games2/01.png', destination: '3' },
           { name: '極速北京PK10', src: '/icons/pk10-2.png', destination: '2', assign: '1' },
           { name: '極速飛艇', src: '/icons/speedboat.png', destination: '2', assign: '2' },
@@ -106,8 +109,14 @@ export default {
           { name: 'SA真人', src: '/icons/games2/05.png', destination: '5' },
           { name: '瑪雅真人', src: '/icons/games2/06.png', destination: '' },
         ], },
-        { type: 'PromoGrid', typesetting: 0, },
-        { type: 'TabBar', typesetting: 0, },
+        { type: 'PromoGrid', typesetting: DEMO_IDX,
+          items: [
+          { url: '/img/l_58f8957c3286fe19a80a5e8d.png', title: '', size: 1, col: 0 },
+          { url: '/img/sport_banner_sc.jpg', title: '', size: 1, col: 1 },        
+          { url: '/img/1-140603230Z223.jpg', title: '', size: 1, col: 0 },
+          { url: '/img/bimages55.jpg', title: '', size: 1, col: 1 },
+        ],},
+        { type: 'TabBar', typesetting: DEMO_IDX, },
       ],
     };
   },
@@ -122,6 +131,6 @@ export default {
 </script>
 
 <style lang="sass">
-.container
-  margin: 0 auto
+.page
+  background: $black-ter
 </style>

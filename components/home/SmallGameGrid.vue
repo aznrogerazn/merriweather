@@ -96,10 +96,39 @@ export default {
           font-size: $size-65
           
   &.type1
+    background: $black-ter
+    .grid-title
+      .leftmost,.more
+        color: $primary-accent-2
+        font-weight: 780
+    .grid
+      .item
+        .title
+          color: $grey-light
+        .icon
+          img
+            border-radius: 100px
+  &.type2
     .grid
       .item
         .title
           background: $warning-accent
+  &.type3
+    .grid
+      .item
+        .title
+          background: $warning-accent
+  &.type4
+    .grid
+      .item
+        .title
+          background: $warning-accent
+  &.type5
+    .grid
+      .item
+        .title
+          background: $warning-accent
+          
   .grid-title
     // border-top: 7px solid #533125
     display: flex

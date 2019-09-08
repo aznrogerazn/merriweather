@@ -6,7 +6,7 @@
         v-for="(item, idx) in demos"
         :key="idx"
         :to="`/demo${(idx + 1)}/`">
-        <img src="https://bulma.io/images/placeholders/320x640.png"/>
+        <img :src="item.imgUrl"/>
       </nuxt-link>
     </div>
   </div>
@@ -17,12 +17,12 @@ export default {
   data() {
     return {
       demos: [
-        { path: '/demo1/' },
-        { path: '/demo2/' },
-        { path: '/demo3/' },
-        { path: '/demo4/' },
-        { path: '/demo5/' },
-        { path: '/demo6/' },
+        { path: '/demo1/', imgUrl: '/preview1.png' },
+        { path: '/demo2/', imgUrl: '/preview2.png' },
+        { path: '/demo3/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png' },
+        { path: '/demo4/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png' },
+        { path: '/demo5/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png' },
+        { path: '/demo6/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png' },
       ]
     }
   },
