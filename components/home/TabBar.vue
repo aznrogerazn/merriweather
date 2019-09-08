@@ -59,6 +59,8 @@ export default {
   z-index: 250
   display: flex
   +no-select
+  padding-bottom: constant(safe-area-inset-bottom)
+  padding-bottom: env(safe-area-inset-bottom)
   .icon
     flex-basis: 20%
     text-align: center

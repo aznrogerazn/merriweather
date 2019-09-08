@@ -136,8 +136,7 @@ export default {
       .item
         .title
           font-size: $size-65
-          background: $complimentary-accent-4
-          color: $white-bis
+          color: $primary-accent-4
           min-height: 1.25rem
           span
             vertical-align: middle
