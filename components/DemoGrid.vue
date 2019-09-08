@@ -7,6 +7,7 @@
         :key="idx"
         :to="`/demo${(idx + 1)}/`">
         <img :src="item.imgUrl"/>
+        <span v-if="item.isWIP">UNDER CONSTRUCTION</span>
       </nuxt-link>
     </div>
   </div>
@@ -17,12 +18,12 @@ export default {
   data() {
     return {
       demos: [
-        { path: '/demo1/', imgUrl: '/preview1.png' },
-        { path: '/demo2/', imgUrl: '/preview2.png' },
-        { path: '/demo3/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png' },
-        { path: '/demo4/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png' },
-        { path: '/demo5/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png' },
-        { path: '/demo6/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png' },
+        { path: '/demo1/', imgUrl: '/preview1.png', isWIP: false, },
+        { path: '/demo2/', imgUrl: '/preview2.png', isWIP: false, },
+        { path: '/demo3/', imgUrl: '/preview3.png', isWIP: false, },
+        { path: '/demo4/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png', isWIP: true, },
+        { path: '/demo5/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png', isWIP: true, },
+        { path: '/demo6/', imgUrl: 'https://bulma.io/images/placeholders/320x640.png', isWIP: true, },
       ]
     }
   },
@@ -39,6 +40,18 @@ export default {
       padding: 0 1rem 1rem 1rem
       img
         width: 100%
+        box-shadow: 0 2px 10px 0 $grey-lighter
+      span
+        position: absolute
+        padding: .5rem 1rem
+        bottom: .5rem
+        right: .5rem
+        text-align: right
+        +no-decoration
+        +no-select
+        color: $grey-dark
+        font-weight: 780
+        font-size: $size-65
 
 @media screen and (max-width: $mobile-width)
   .demogrid
