@@ -111,6 +111,7 @@ export default {
         padding: .5rem
         color: $white-bis
         border-radius: 5px
+        margin-bottom: .5rem
         +no-select
         +normal-transition
         span
@@ -118,15 +119,14 @@ export default {
         &:hover
           background-size: auto 105%
           cursor: pointer
+        &.size0
+          height: calc(25vw - 1rem)
         &.size1
           height: calc(50vw - 1rem)
-          margin-bottom: .5rem
         &.size2
           height: calc(100vw - 1.5rem)
-          margin-bottom: .5rem
         &.size3
           height: calc(150vw - 2rem)
-          margin-bottom: .5rem
   &.style0
   &.style1
     background: $black-ter
