@@ -131,10 +131,12 @@ body
 
 /* Nuxt Page Transition */
 .page-enter-active, .page-leave-active
-  transition: opacity .3s
+  transition: .3s ease
 
 .page-enter, .page-leave-to
   opacity: 0
+  transform: scale(1.1, 1.1)
 
 .page-enter-to, .page-leave
   opacity: 1
+  transform: scale(1, 1)
