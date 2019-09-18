@@ -148,4 +148,30 @@ module.exports = {
       //
     },
   },
+
+  /**
+   * Server Middleware Config
+   */
+  serverMiddleware: [
+    { path: '/icons', handler: '~/api/headers.js', },
+    { path: '/img', handler: '~/api/headers.js', },
+    { path: '/_nuxt/assets', handler: '~/api/headers.js', },
+  ],
+
+  /**
+   * Page Transition Config
+   */
+  // pageTransition: {
+  //   name: 'page',
+  //   mode: 'out-in',
+  // },
+
+  /**
+   * Renderer Config
+   */
+  render: {
+    static: {
+      maxAge: 604800000,
+    },
+  },
 }
