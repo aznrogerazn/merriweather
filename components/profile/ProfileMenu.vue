@@ -24,18 +24,25 @@
         v-show="idx === currentIdx"
         class="menu-group">
         <ProfileSummary
-          v-if="component.type === 'ProfileSummary'"/>
+          v-if="component.type === 'ProfileSummary'"
+          :typesetting="typesetting"/>
+        <Conversion
+          v-if="component.type === 'Conversion'"
+          :typesetting="typesetting"/>
       </div>
     </transition-group>
   </div>
 </template>
 <script>
 import ProfileSummary from '@/components/profile/ProfileSummary';
+import Conversion from '@/components/profile/Conversion';
+
 
 export default {
   name: 'ProfileMenu',
   components: {
     ProfileSummary,
+    Conversion,
   },
   props: {
     typesetting: {

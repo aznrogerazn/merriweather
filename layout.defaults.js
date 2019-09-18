@@ -27,7 +27,7 @@ const config = {
   complimentaryAccent: '#E3E5DC',
   fontStack: 'Nanum Gothic, -apple-system,BlinkMacSystemFont,Segoe UI,Microsoft YaHei,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol',
   monospaceFontStack: 'Consolas,Liberation Mono,Courier,monospace',
-  googleFontsToLoad: [ 'Nanum Gothic' ],
+  googleFontsToLoad: [ 'Nanum Gothic', 'Montserrat' ],
 
   // Index
 };

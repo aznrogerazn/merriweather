@@ -2,6 +2,9 @@
   <div
     class="profile-summary"
     :class="`style${typesetting}`">
+    <div class="titular-row">
+      <div>會員資料</div>
+    </div>
     <div class="info-row">
       <img
         class="icon"
@@ -9,6 +12,9 @@
       <div class="user-info">
         <div class="username">{{ user.username }}</div>
         <div class="nickname">{{ user.nickname }}</div>
+      </div>
+      <div class="user-type-tag">
+        {{ userType }}
       </div>
     </div>
     <br/>
@@ -39,19 +45,19 @@
         <div class="icon green">
           <i class="fas fa-sync"/>
         </div>
-        轉換
+        <span class="label">轉換</span>
       </div>
       <div class="action">
         <div class="icon red">
           <i class="fas fa-money-bill-alt"/>
         </div>
-        提款
+        <span class="label">提款</span>
       </div>
       <div class="action">
         <div class="icon blue">
           <i class="fas fa-hand-holding-usd"/>
         </div>
-        存款
+        <span class="label">存款</span>
       </div>
     </div>
   </div>
@@ -73,9 +79,15 @@ export default {
         nickname: 'John Appleseed',
         balance: '9168.50',
         total_balance: '22168.50',
+        type: 1,
       },
       showingCoins: false,
     };
+  },
+  computed: {
+    userType() {
+      return this.user.type === 1 ? '一般會員' : '系統號';
+    },
   },
   mounted() {
     setTimeout(() => {
@@ -86,19 +98,34 @@ export default {
 </script>
 <style lang="sass" scoped>
 .profile-summary
-  padding: 1rem 0
+  padding: .5rem 0 1rem 0
+  .titular-row
+    padding-bottom: 1.5rem
+    font-size: $size-3
+    color: $white-ter
   .info-row
+    position: relative
     display: flex
     img.icon
       width: 40px
       height: 40px
     .user-info
       padding: 0 10px
+      flex: 1
       .username
         font-size: $size-7
         opacity: .8
       .nickname
         font-size: $size-5
+    .user-type-tag
+      position: absolute
+      top: 0
+      right: 0
+      border: 1px solid $grey-light
+      border-radius: 2px
+      padding: 2px 5px
+      font-size: $size-7
+
   .balance-info
     position: relative
     padding: 1rem 0
@@ -108,6 +135,7 @@ export default {
       opacity: .6
     .value
       font-size: $size-3
+      font-family: 'Montserrat'
       color: $complimentary-accent-2
       padding: 5px
     .refresh-now
@@ -118,8 +146,8 @@ export default {
       border-radius: 2px
       padding: 5px
       font-size: $size-65
-      font-weight: 750
   .coin-wrapper
+    +no-select
     border-top: 1px solid $grey-light
     padding: 1.5rem 0
     min-height: 120px
@@ -127,24 +155,25 @@ export default {
     justify-content: center
     align-items: center
     img.coin
-      height: 90px
+      height: 18vh
       &.front
-        transform: translate3d(-45px, 0, 0)
+        transform: translate3d(-9vh, 0, 0)
         transition: .75s ease-in-out
         &.show
-          transform: translate3d(-75px, 0, 0) rotate(-10deg)
+          transform: translate3d(-13vh, 0, 0) rotate(-10deg)
       &.back
-        transform: translate3d(45px, 0, 0)
+        transform: translate3d(9vh, 0, 0)
         transition: .75s ease-in-out
         opacity: .3
         &.show
-          transform: translate3d(45px, 0, 0)
+          transform: translate3d(9vh, 0, 0)
           opacity: 1
   .shortcuts
+    +no-select
     display: flex
     justify-content: space-around
     .action
-      padding: 5px
+      text-align: center
       .icon
         font-size: $size-4
         padding-bottom: 5px
@@ -154,6 +183,8 @@ export default {
           color: #D17867
         &.blue
           color: #5485B3
+      .label
+        font-size: $size-65
   &.style0
     .info-row
       img.icon

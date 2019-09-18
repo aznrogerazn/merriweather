@@ -1,14 +1,21 @@
 <template>
   <div
-    class="default"
+    class="conversion"
     :class="`style${typesetting}`">
+    <div class="titular-row">
+      <div>額度轉換</div>
+    </div>
+    <div
+      class="modal"
+      :class="isModalOpen ? 'active' : '' ">
+    </div>
   </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
 
 export default {
-  name: 'Default',
+  name: 'Conversion',
   props: {
     typesetting: {
       type: Number,
@@ -18,7 +25,7 @@ export default {
   },
   data() {
     return {
-      //
+      isModalOpen: false,
     };
   },
   computed: {},
@@ -27,7 +34,11 @@ export default {
 };
 </script>
 <style lang="sass" scoped>
-.default
+.conversion
+  padding: .5rem 0 1rem 0
+  .titular-row
+    padding-bottom: 1.5rem
+    font-size: $size-3
   &.style0
   &.style1
   &.style2
@@ -37,9 +48,9 @@ export default {
 
 
 @media screen and (max-width: $mobile-width)
-  .default
+  .conversion
 
 @media screen and (min-width: $mobile-width) and (max-width: $desktop-width)
-  .default
+  .conversion
 </style>
 
