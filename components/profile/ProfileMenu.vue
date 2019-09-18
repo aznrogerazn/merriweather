@@ -59,6 +59,7 @@ export default {
 <style lang="sass" scoped>
 $top-margin: 40px
 $bottom-margin: 55px
+$nav-width: 60px
 
 .profileMenu
   min-height: 100vh
@@ -68,7 +69,7 @@ $bottom-margin: 55px
   display: flex
   .nav
     position: relative
-    width: 60px
+    width: $nav-width
     min-height: calc(100vh - #{$top-margin} - #{$bottom-margin})
     // height: 100%
     .nav-item
@@ -92,6 +93,7 @@ $bottom-margin: 55px
   .menu-area
     flex: 1
     .menu-group
+      width: calc(100vw - #{$nav-width})
       padding: 10px
   &.style0
     background: $grey-dark
