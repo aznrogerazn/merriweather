@@ -48,6 +48,7 @@
       <TabBar
         v-if="component.type === 'TabBar'"
         :typesetting="component.typesetting"
+        :activeIdx="0"
         />
       
       

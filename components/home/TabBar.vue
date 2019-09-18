@@ -7,7 +7,8 @@
       v-for="(item, idx) in arrangement"
       :key="idx"
       class="icon"
-      :to="`./`">
+      :class="activeIdx === idx ? 'active' : ''"
+      :to="`./${item.link}`">
       <img :src="`/tabbar/colour${typesetting}/${item.type}.png`"/>
       <div
         v-if="item.caption"
@@ -47,6 +48,11 @@ export default {
       default: '#323232',
       required: false,
     },
+    activeIdx: {
+      type: Number,
+      default: 0,
+      required: false,
+    },
   },
 };
 </script>
@@ -66,11 +72,14 @@ export default {
     text-align: center
     padding: 2px
     +no-decoration  
+    filter: saturate(0)
     img
       width: auto
       max-height: 30px
     .caption
       font-size: $size-7
+    &.active
+      filter: saturate(1)
   &.style0
     .icon
       .caption
