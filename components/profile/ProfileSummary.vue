@@ -156,12 +156,15 @@ export default {
     align-items: center
     img.coin
       height: 18vh
+      border-radius: 100%
       &.front
+        box-shadow: 0 0 12px 0 $grey-darker
         transform: translate3d(-9vh, 0, 0)
         transition: .75s ease-in-out
         &.show
           transform: translate3d(-13vh, 0, 0) rotate(-10deg)
       &.back
+        box-shadow: 0 3px 12px 0 $grey-darker
         transform: translate3d(9vh, 0, 0)
         transition: .75s ease-in-out
         opacity: .3

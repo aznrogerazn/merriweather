@@ -129,11 +129,12 @@ export default {
       background: $complimentary-accent-2
       padding: 5px
       color: $grey-dark
-      border-radius: 10px
+      border-radius: 7px
       letter-spacing: 2px
       text-align: center
       flex: 1
       margin: .5rem 1.5rem
+      box-shadow: 0 3px 12px 0 $grey-darker
     &.border
       border-top: 1px solid $grey-light
       justify-content: center

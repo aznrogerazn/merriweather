@@ -29,6 +29,9 @@
         <Conversion
           v-if="component.type === 'Conversion'"
           :typesetting="typesetting"/>
+        <BankSummary
+          v-if="component.type === 'BankSummary'"
+          :typesetting="typesetting"/>
       </div>
     </transition-group>
   </div>
@@ -36,13 +39,14 @@
 <script>
 import ProfileSummary from '@/components/profile/ProfileSummary';
 import Conversion from '@/components/profile/Conversion';
-
+import BankSummary from '@/components/profile/BankSummary';
 
 export default {
   name: 'ProfileMenu',
   components: {
     ProfileSummary,
     Conversion,
+    BankSummary,
   },
   props: {
     typesetting: {
