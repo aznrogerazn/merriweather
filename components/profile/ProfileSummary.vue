@@ -16,11 +16,11 @@
       <img
         class="coin back"
         :class="showingCoins ? 'show' : '' "
-        src="/img/coin-back-c.png"/>
+        src="~assets/img/coin-back-c.png"/>
       <img
         class="coin front"
         :class="showingCoins ? 'show' : '' "
-        src="/img/coin-front-c.png"/>
+        src="~assets/img/coin-front-c.png"/>
     </div>
     <div class="balance-info">
       <div class="tag">中心餘額</div>

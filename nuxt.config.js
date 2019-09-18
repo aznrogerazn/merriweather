@@ -69,6 +69,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
+    '@bazzite/nuxt-optimized-images',
   ],
   /*
   ** Axios module configuration
@@ -82,6 +83,11 @@ module.exports = {
     sass: [
       'assets/global.sass'
     ]
+  },
+
+  /* Image Optimiser Configuration */
+  optimizedImages: {
+    optimizeImages: true
   },
   
   /*
@@ -131,5 +137,15 @@ module.exports = {
       { type: 'PromoGrid', },
       { type: 'GameMenu', },
     ],
+  },
+
+  /**
+   * Progressive Web App Config
+   * for offline caching and unstable network
+   */
+  pwa: {
+    workbox: {
+      //
+    },
   },
 }
