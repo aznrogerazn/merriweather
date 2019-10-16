@@ -7,11 +7,20 @@
     </div>
     <div class="panel-row">
       <div class="account-info">
-        <div class="tag">主帳戶</div>
+        <div class="tag">{{ accounts[fromAccountId].name }}</div>
         <div class="value">9168.50</div>
       </div>
       <div class="dropdown">
         <i class="fas fa-chevron-down"/>
+        <select
+          v-model="fromAccountId">
+          <option
+            v-for="(account, idx) in accounts"
+            :key="idx"
+            :value="account.id">
+            {{ account.name }}
+          </option>
+        </select>
       </div>
     </div>
     <br/>
@@ -27,11 +36,20 @@
     <br/>
     <div class="panel-row">
       <div class="account-info">
-        <div class="tag">主帳戶</div>
+        <div class="tag">{{ accounts[toAccountId].name }}</div>
         <div class="value">9168.50</div>
       </div>
       <div class="dropdown">
         <i class="fas fa-chevron-down"/>
+        <select
+          v-model="toAccountId">
+          <option
+            v-for="(account, _idx) in accounts"
+            :key="_idx"
+            :value="account.id">
+            {{ account.name }}
+          </option>
+        </select>
       </div>
     </div>
     <br/>
@@ -63,6 +81,22 @@ export default {
     return {
       isModalOpen: false,
       amountToConvert: 0,
+      accounts: [
+        { id: 0, icon: '/icons/cocaine.png', name: '主帳戶', balance: 0 },
+        { id: 1, icon: '/icons/games/7.jpg', name: 'SUPER體育', balance: 0 },
+        { id: 2, icon: '/icons/pk10-2.png', name: '彩票', balance: 0 },
+        { id: 3, icon: '/icons/games2/01.png', name: 'BINGO STAR', balance: 0 },
+        { id: 4, icon: '/icons/games3/f8.png', name: 'F8電子', balance: 0 },
+        { id: 5, icon: '/icons/games2/05.png', name: 'SA真人', balance: 0 },
+        { id: 6, icon: '/icons/games3/rtg.png', name: 'RTG電子', balance: 0 },
+        { id: 7, icon: '/icons/games3/lucky.png', name: '幸運棋牌', balance: 0 },
+        { id: 8, icon: '/icons/games2/07.png', name: '歐博', balance: 0 },
+        { id: 9, icon: '/icons/games2/08.png', name: 'DG視訊', balance: 0 },
+        { id: 10, icon: '/icons/games2/10.png', name: 'AMEBA電子', balance: 0 },
+        // { id: 11, icon: '/icons/games3/s.png', name: '二元期權', balance: 0 },
+      ],
+      fromAccountId: 0,
+      toAccountId: 0,
     };
   },
   computed: {},
@@ -93,6 +127,7 @@ export default {
       display: flex
       justify-content: center
       align-items: center
+      position: relative
       i.fas
         font-size: $size-7
         opacity: .6
@@ -101,6 +136,11 @@ export default {
         height: 2rem
         line-height: 2rem
         text-align: center
+      select
+        position: absolute
+        height: 100%
+        width: 100%
+        opacity: 0
     .conversion-input
       position: relative
       background: $grey-darker
