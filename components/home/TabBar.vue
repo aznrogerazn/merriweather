@@ -9,7 +9,7 @@
       class="icon"
       :class="activeIdx === idx ? 'active' : ''"
       :to="`./${item.link}`">
-      <img :src="require(`~/assets/tabbar/colour${typesetting}/${item.type}.png`)"/>
+      <img :src="require(`@/assets/tabbar/colour${typesetting}/${item.type}.png`)"/>
       <div
         v-if="item.caption"
         class="caption">{{ item.caption }}</div>
