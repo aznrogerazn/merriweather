@@ -158,6 +158,7 @@ export default {
         border: 0
         outline: 0
         width: 25vw
+        font-family: 'Montserrat'
       .all-in
         background: $complimentary-accent-2
         border-radius: 2px

@@ -32,6 +32,9 @@
         <BankSummary
           v-if="component.type === 'BankSummary'"
           :typesetting="typesetting"/>
+        <Password
+          v-if="component.type === 'Password'"
+          :typesetting="typesetting"/>
       </div>
     </transition-group>
   </div>
@@ -40,6 +43,7 @@
 import ProfileSummary from '@/components/profile/ProfileSummary';
 import Conversion from '@/components/profile/Conversion';
 import BankSummary from '@/components/profile/BankSummary';
+import Password from '@/components/profile/Password';
 
 export default {
   name: 'ProfileMenu',
@@ -47,6 +51,7 @@ export default {
     ProfileSummary,
     Conversion,
     BankSummary,
+    Password,
   },
   props: {
     typesetting: {

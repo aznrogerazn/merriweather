@@ -50,7 +50,7 @@ export default {
           { imageUrl: '/icons/nav/1.png', title: '會員資料', type: 'ProfileSummary', },
           { imageUrl: '/icons/nav/2.png', title: '額度轉換', type: 'Conversion', },
           { imageUrl: '/icons/nav/3.png', title: '銀行帳號', type: 'BankSummary', },
-          { imageUrl: '/icons/nav/4.png', title: '密碼變更', type: 'EditPassword', },
+          { imageUrl: '/icons/nav/4.png', title: '密碼變更', type: 'Password', },
           { imageUrl: '/icons/nav/5.png', title: '盈虧報表', type: 'ProfitRecords', },
           { imageUrl: '/icons/nav/6.png', title: '轉換紀錄', type: 'ConversionRecords', },
           { imageUrl: '/icons/nav/7.png', title: '存提紀錄', type: 'ProfileSummary', },
