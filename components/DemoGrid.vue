@@ -18,12 +18,12 @@ export default {
   data() {
     return {
       demos: [
-        { path: '/demo1/', imgUrl: '/preview1.png', isWIP: false, },
-        { path: '/demo2/', imgUrl: '/preview2.png', isWIP: false, },
-        { path: '/demo3/', imgUrl: '/preview3.png', isWIP: false, },
-        { path: '/demo4/', imgUrl: '/preview4.png', isWIP: false, },
-        { path: '/demo5/', imgUrl: '/preview5.png', isWIP: false, },
-        { path: '/demo6/', imgUrl: '/preview6.png', isWIP: false, },
+        { path: 'http://demo1.leopard168.co', imgUrl: '/preview1.png', isWIP: false, },
+        { path: 'http://demo2.leopard168.co', imgUrl: '/preview2.png', isWIP: false, },
+        { path: 'http://demo3.leopard168.co', imgUrl: '/preview3.png', isWIP: false, },
+        { path: 'http://demo4.leopard168.co', imgUrl: '/preview4.png', isWIP: false, },
+        { path: 'http://demo5.leopard168.co', imgUrl: '/preview5.png', isWIP: false, },
+        { path: 'http://demo6.leopard168.co', imgUrl: '/preview6.png', isWIP: false, },
       ]
     }
   },
