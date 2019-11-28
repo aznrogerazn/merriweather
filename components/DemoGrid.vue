@@ -2,13 +2,13 @@
   <div class="demogrid">
     <br/><br/><br/>
     <div class="grid">
-      <nuxt-link
+      <a
         v-for="(item, idx) in demos"
         :key="idx"
-        :to="item.path">
+        :href="item.path">
         <img :src="item.imgUrl"/>
         <span v-if="item.isWIP">UNDER CONSTRUCTION</span>
-      </nuxt-link>
+      </a>
     </div>
   </div>
 </template>
