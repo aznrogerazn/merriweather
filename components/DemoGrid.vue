@@ -5,7 +5,7 @@
       <nuxt-link
         v-for="(item, idx) in demos"
         :key="idx"
-        :to="`/demo${(idx + 1)}/`">
+        :to="item.path">
         <img :src="item.imgUrl"/>
         <span v-if="item.isWIP">UNDER CONSTRUCTION</span>
       </nuxt-link>
